@@ -26,7 +26,6 @@ import { ServiceCard } from '@/components/common/ServiceCard';
 import { BookingCTA } from '@/components/common/BookingCTA';
 import { ImageLightbox } from '@/components/common/ImageLightbox';
 import { ShaderLinesCanvas } from '@/components/common/ShaderLinesCanvas';
-import { ShaderBeamLine } from '@/components/common/ShaderBeamLine';
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip';
 import { fadeInUp, staggerContainer } from '@/components/animations/variants';
 
