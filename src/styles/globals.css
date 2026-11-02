@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: #e2e8f0;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-feature-settings: "rlig" 1, "calt" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+    overflow-x: hidden;
+  }
+
+  /* Custom Clean SaaS Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+    border: 1px solid #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+/* Next.js / Linear Bento Card Style */
+.next-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 
+    0 1px 2px 0 rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.next-card:hover {
+  border-color: rgba(148, 163, 184, 0.6);
+  box-shadow: 
+    0 12px 30px -8px rgba(15, 23, 42, 0.08),
+    0 4px 10px -2px rgba(15, 23, 42, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Modern Next.js Frosted Glass Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 
+    0 4px 24px -2px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 14px 30px -6px rgba(15, 23, 42, 0.08), 0 6px 12px -4px rgba(15, 23, 42, 0.04);
+}
+
+/* High-tech Next.js Brand Title Gradient */
+.brand-gradient {
+  background: linear-gradient(135deg, #09090b 0%, #1e1b4b 40%, #4338ca 70%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #09090b 0%, #312e81 50%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-glow-purple {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 24px -2px rgba(139, 92, 246, 0.2);
+}
+
+/* Linear-style Shimmer Badge */
+.shimmer-badge {
+  background: linear-gradient(90deg, #f8fafc 0%, #ede9fe 50%, #f8fafc 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Next.js Line Shaders & Animated Gradient Beams */
+.line-shader-gradient {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(124, 58, 237, 0.2) 15%,
+    rgba(99, 102, 241, 0.85) 35%,
+    rgba(6, 182, 212, 1) 50%,
+    rgba(236, 72, 153, 0.85) 65%,
+    rgba(124, 58, 237, 0.2) 85%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: lineShaderFlow 6s linear infinite;
+}
+
+.line-shader-vertical {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(124, 58, 237, 0.2) 15%,
+    rgba(99, 102, 241, 0.8) 40%,
+    rgba(6, 182, 212, 1) 50%,
+    rgba(236, 72, 153, 0.8) 60%,
+    rgba(124, 58, 237, 0.2) 85%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: lineShaderVerticalFlow 6s linear infinite;
+}
+
+@keyframes lineShaderFlow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes lineShaderVerticalFlow {
+  0% {
+    background-position: 0 200%;
+  }
+  100% {
+    background-position: 0 -200%;
+  }
+}
+
+.line-shader-glow {
+  box-shadow: 
+    0 0 12px rgba(124, 58, 237, 0.4),
+    0 0 25px rgba(6, 182, 212, 0.25),
+    0 0 35px rgba(236, 72, 153, 0.15);
+}
+
+/* Pulsing audio line animation */
+@keyframes soundShaderPulse {
+  0%, 100% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(6, 182, 212, 0.6));
+  }
+}
+
+.animate-sound-shader {
+  animation: soundShaderPulse 3s ease-in-out infinite;
+}
+
+/* Next.js Subtle Radial Spotlight Mesh */
+.bg-saas-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+}
+
+.bg-radial-spotlight {
+  background-image: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
+}
+
+.bg-saas-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
